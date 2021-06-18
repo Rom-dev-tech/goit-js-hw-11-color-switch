@@ -36,3 +36,12 @@ label {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   outline: none;
 }
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: #3f51b5;
+}
