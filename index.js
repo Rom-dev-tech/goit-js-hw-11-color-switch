@@ -20,11 +20,12 @@ refs.stopBtn.addEventListener('click', onStopBtnClick);
 
 // StartBtn
 function onStartBtnClick() {
+  refs.startBtn.style.backgroundColor = 'grey';
+  refs.startBtn.setAttribute('disabled', false);
+
   id = setInterval(() => {
     const rendomNumber = randomIntegerFromInterval(MIN_VALUE, MAX_VALUE);
     refs.body.style.background = `${colors[rendomNumber]}`;
-    refs.startBtn.setAttribute('disabled', false);
-    refs.startBtn.style.backgroundColor = 'grey';
   }, 1000);
 }
 
