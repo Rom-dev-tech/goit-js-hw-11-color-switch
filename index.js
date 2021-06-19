@@ -23,10 +23,7 @@ function onStartBtnClick() {
   refs.startBtn.style.backgroundColor = 'grey';
   refs.startBtn.setAttribute('disabled', false);
 
-  id = setInterval(() => {
-    const rendomNumber = randomIntegerFromInterval(MIN_VALUE, MAX_VALUE);
-    refs.body.style.background = `${colors[rendomNumber]}`;
-  }, 1000);
+  id = setInterval(randomColor, 1000);
 }
 
 // StopBtn
@@ -34,6 +31,12 @@ function onStopBtnClick() {
   clearInterval(id);
   refs.startBtn.removeAttribute('disabled', true);
   refs.startBtn.style.backgroundColor = '';
+}
+
+// Makes random color
+function randomColor() {
+  const rendomNumber = randomIntegerFromInterval(MIN_VALUE, MAX_VALUE);
+  refs.body.style.background = `${colors[rendomNumber]}`;
 }
 
 // Rendom number
